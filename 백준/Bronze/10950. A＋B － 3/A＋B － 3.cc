@@ -1,15 +1,13 @@
 #include <stdio.h>
 
-int main() {
+int main(void) {
+	int a, b;
+	int T;
+	scanf("%d", &T);
+	for(int i = 0; i < T; i++){
+	    scanf("%d %d", &a, &b);
+	    printf("%d\n", a+b);
+	}
 
-    int t, a, b;
-
-    scanf("%d", &t);
-
-    for (int i = 0; i < t; i++) {
-        scanf("%d %d", &a, &b);
-        printf("%d \n", a + b);
-    }
-
-    return 0;
+	return 0;
 }
