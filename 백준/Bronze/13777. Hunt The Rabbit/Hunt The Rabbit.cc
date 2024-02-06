@@ -5,39 +5,35 @@
 
 using namespace std;
 
-int main()
-{
-    int n, left, mid, right; // 이진탐색
-    
-    while(1){
-        cin >> n;
-        if(n == 0){     //0입력 시 종료
-            return 0;
-        }
-        while(n){
-            int mid = 25;
-            if(n == 25){
-                if(n == mid){
-                    cout << mid << endl;
-                }
-            }
-            else{
-                left = 1;
-                right = 50;
-                while(mid != n){
-                    cout << mid << " ";
-                    if(mid > n){
-                        right = mid - 1;
-                    }
-                    else{
-                        left = mid + 1;
-                    }
-                    mid = (left + right) / 2;
-                }
-                cout << mid << '\n';
-            }
-            break;
-        }
-    }
-    return 0;
+int main() {
+	ios::sync_with_stdio(false); 
+	cin.tie(NULL); 
+	cout.tie(NULL);
+	
+	int n;
+	while(true){
+	    cin>>n;
+	    if(n==0){
+	        break;
+	    }
+	    else{
+	        int left=1,right=50;
+	        while(left<=right){         //종료 방식 확인
+	            int mid=(left+right)/2;
+	            if(n==mid){
+	                cout<<mid<<"\n";
+	                left=right+1;       //종료 조건 만들기
+	            }
+	            else if(n>mid){
+	                cout<<mid<<" ";
+	                left=mid+1;
+	            }
+	            else{
+	                cout<<mid<<" ";
+	                right=mid-1;
+	            }
+	        }
+	    }
+	}
+	return 0;
 }
