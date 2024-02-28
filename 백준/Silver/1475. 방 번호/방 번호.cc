@@ -8,7 +8,6 @@ int main() {
   
   int N, a[9] = {0, }, ans = 0;
   cin >> N;
-
   while(N){
     if(N%10 == 6 || N%10 == 9){
         a[6]++;
@@ -18,9 +17,7 @@ int main() {
     }
     N /= 10;
   }
-  
   a[6] = (a[6] + 1) / 2;
-
   for(int i = 0; i < 10; i++){
     ans = max(ans, a[i]);
   }
