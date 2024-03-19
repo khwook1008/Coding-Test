@@ -7,8 +7,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-char board[102][102];
-//string board[102];
+//char board[102][102];
+string board[102];
 int vis[102][102];
 
 int dx[4] = {1, 0, -1, 0};
@@ -43,14 +43,14 @@ void bfs(int i, int j){
 int main(){
     cin >> N;
     //board 채우기
-    for(int i = 0; i < N; i++){
-        for(int j = 0; j < N; j++){
-            cin >> board[i][j];
-        }
-    }
-    // for (int i = 0; i < N; i++){
-    //     cin >> board[i];
+    // for(int i = 0; i < N; i++){
+    //     for(int j = 0; j < N; j++){
+    //         cin >> board[i][j];
+    //     }
     // }
+    for (int i = 0; i < N; i++){
+        cin >> board[i];
+    }
 
     //정상인 먼저
     for(int i = 0; i < N; i++){
